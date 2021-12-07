@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="01-create-users-table" author="Marek">
+
+        <insert tableName="users">
+            <column name="username" value="Tina Crouch"/>
+            <column name="email" value="tina@gmail.com"/>
+            <column name="role" value="teacher"/>
+            <column name="password" value="tinaPass"/>
+        </insert>
+        <insert tableName="users">
+            <column name="username" value="Tom Brown"/>
+            <column name="email" value="tom@gmail.com"/>
+            <column name="role" value="teacher"/>
+            <column name="password" value="tomPass"/>
+        </insert>
+        <insert tableName="users">
+            <column name="username" value="Paula Smith"/>
+            <column name="email" value="paula@gmail.com"/>
+            <column name="role" value="pupil"/>
+            <column name="password" value="paulaPass"/>
+        </insert>
+        <insert tableName="users">
+            <column name="username" value="Peggy Owens"/>
+            <column name="email" value="peggy@gmail.com"/>
+            <column name="role" value="pupil"/>
+            <column name="password" value="peggyPass"/>
+        </insert>
+        <insert tableName="users">
+            <column name="username" value="Patrick Jordan"/>
+            <column name="email" value="patrick@gmail.com"/>
+            <column name="role" value="pupil"/>
+            <column name="password" value="patrickPass"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>

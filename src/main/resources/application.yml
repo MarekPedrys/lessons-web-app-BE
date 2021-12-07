@@ -1,0 +1,14 @@
+spring:
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/lessons?createDatabaseIfNotExist=true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC

@@ -1,0 +1,21 @@
+version: '3'
+services:
+  database:
+    container_name: 'mysql'
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: lessons
+    ports:
+      - "3306:3306"
+    restart: always
+  application:
+    container_name: 'app'
+    build: .
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    depends_on:
+      - database

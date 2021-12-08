@@ -2,9 +2,9 @@ spring:
   liquibase:
     change-log: classpath:db/changelog/changelog-master.xml
   datasource:
-    username: root
-    password: root
-    url: jdbc:mysql://localhost:3306/lessons?createDatabaseIfNotExist=true
+    username: user
+    password: password
+    url: jdbc:mysql://database:3306/lessons?createDatabaseIfNotExist=true
   jpa:
     hibernate:
       ddl-auto: validate
